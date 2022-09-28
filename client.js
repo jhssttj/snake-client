@@ -21,14 +21,7 @@ const connect = function () {
   return conn;
 };
 
-//Taking user inputs
-const handleUserInput = function (key) {
-  if (key === '\u0003') {
-    process.exit();
-  }
-};
 
 module.exports = {
   connect,
-  handleUserInput,
 }
