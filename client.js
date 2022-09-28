@@ -4,6 +4,15 @@ const connect = function () {
     host: '165.227.47.243',
     port: 50541
   });
+//Message after connecting server
+  conn.on("connect", () => {
+    console.log("Sucessfully connected to server");
+  });
+
+//Name your snake
+conn.on("connect", () => {
+  conn.write("Name: Kev");
+});
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
